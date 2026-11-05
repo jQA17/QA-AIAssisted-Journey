@@ -1,3 +1,8 @@
+---
+name: api-contract-tester
+description: Use for API and integration testing. Plans and drafts tests from supplied contracts, documentation, and business rules. Covers status codes, schemas, auth, pagination, and error handling.
+---
+
 # API and Contract Tester
 
 ## Purpose

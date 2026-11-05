@@ -157,8 +157,21 @@ Before submitting AI-generated outputs for human review, confirm:
 ## Suggested QA Workflow
 
 ```
-Requirements → Risk Analysis → Test Design → Human Review → Execution → Defect Investigation → Release Assessment
+SOW Analysis → Requirements Review → Test Planning → Test Design → Automation → Execution → Defect Investigation → Release Assessment
 ```
+
+| Stage | Agent to use |
+|-------|-------------|
+| SOW Analysis | `sow-analyzer` |
+| Requirements Review | `requirements-risk-analyst` |
+| Test Planning | `test-plan-designer` |
+| Test Design | `test-case-designer` |
+| API Testing | `api-contract-tester` |
+| Nonfunctional Testing | `nonfunctional-test-planner` |
+| Exploratory Testing | `exploratory-testing-coach` |
+| Automation | `test-automation-engineer` |
+| Defect Investigation | `defect-triage-investigation-assistant` |
+| Release Assessment | `release-quality-advisor` |
 
 At each stage, apply:
 1. Supplied context only — no invented requirements or results
@@ -208,13 +221,31 @@ When working on systems that handle case data, client information, or legally se
 
 ---
 
-## Recommended Starting Points
+## Available Agents
+
+All agents live in [`.claude/agents/`](.claude/agents/). Claude Code loads them automatically — invoke by name in your prompt (e.g. "use the sow-analyzer agent").
+
+| Agent | File | When to use |
+|-------|------|-------------|
+| Scope-of-Work Analyzer | `sow-analyzer.md` | First step — parse a raw SOW into a structured QA artifact |
+| Requirements and Risk Analyst | `requirements-risk-analyst.md` | Surface gaps, ambiguity, and risk before test design |
+| Test Plan Designer | `test-plan-designer.md` | Draft a Test Plan from an approved SOW Analysis |
+| Test Case Designer | `test-case-designer.md` | Turn approved requirements into traceable test cases |
+| API and Contract Tester | `api-contract-tester.md` | Plan and draft API/integration tests from a contract |
+| Nonfunctional Test Planner | `nonfunctional-test-planner.md` | Plan accessibility, performance, reliability, or security testing |
+| Exploratory Testing Coach | `exploratory-testing-coach.md` | Guide session-based exploratory testing |
+| Test Automation Engineer | `test-automation-engineer.md` | Design and draft automated tests aligned to project patterns |
+| Defect Triage and Investigation Assistant | `defect-triage-investigation-assistant.md` | Turn failure evidence into a structured bug report |
+| Release Quality Advisor | `release-quality-advisor.md` | Summarize test evidence and residual risk before a release |
+
+### Recommended Starting Points
 
 If you are new to AI-assisted QA, start here in order:
 
-1. **Requirements and Risk Analyst** — Review requirements and surface gaps before designing tests
-2. **Test Case Designer** — Turn approved requirements into structured, traceable test cases
-3. **Defect Triage and Investigation Assistant** — Structure and investigate a defect before filing
+1. **sow-analyzer** — Extract all QA-relevant information from the SOW
+2. **requirements-risk-analyst** — Review requirements and surface gaps before designing tests
+3. **test-case-designer** — Turn approved requirements into structured, traceable test cases
+4. **defect-triage-investigation-assistant** — Structure and investigate a defect before filing
 
 ---
 

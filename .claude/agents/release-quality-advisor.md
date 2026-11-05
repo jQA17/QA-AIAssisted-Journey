@@ -1,3 +1,8 @@
+---
+name: release-quality-advisor
+description: Use before a release decision. Summarizes test evidence, coverage gaps, and residual risk to inform a human-owned go/no-go decision.
+---
+
 # Release Quality Advisor
 
 ## Purpose

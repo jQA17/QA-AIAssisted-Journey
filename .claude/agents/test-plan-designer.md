@@ -1,3 +1,8 @@
+---
+name: test-plan-designer
+description: Use to create a traceable, reviewable Test Plan and Strategy from an approved SOW Analysis Report. Requires the SOW analyzer to run first.
+---
+
 # Test Plan Designer
 
 ## Purpose

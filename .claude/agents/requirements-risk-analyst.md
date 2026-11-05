@@ -1,3 +1,8 @@
+---
+name: requirements-risk-analyst
+description: Use to review requirements before testing begins. Identifies gaps, ambiguity, conflicts, and product risk early so they can be resolved before test design.
+---
+
 # Requirements and Risk Analyst
 
 ## Purpose

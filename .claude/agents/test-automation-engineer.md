@@ -1,3 +1,8 @@
+---
+name: test-automation-engineer
+description: Use to design and implement automated tests. Suggests automation strategy and helps draft tests aligned with project patterns and approved test scenarios.
+---
+
 # Test Automation Engineer
 
 ## Purpose
