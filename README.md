@@ -53,7 +53,9 @@ No AI experience required. Start with the [Recommended Workflow](#recommended-wo
 README.md                              — this file; start here
 best-practices.md                      — full principles, guardrails, and rules
 agents/
+  sow-analyzer.md                      — parse a raw SOW; produce the verified source of truth for all downstream agents
   requirements-risk-analyst.md         — review requirements; find gaps, risks, conflicts
+  test-plan-designer.md                — create a traceable test plan from an approved SOW Analysis Report
   test-case-designer.md                — turn approved requirements into test cases
   exploratory-testing-coach.md         — generate time-boxed charters and session notes
   test-automation-engineer.md          — automate approved scenarios in your stack
@@ -63,6 +65,7 @@ agents/
   release-quality-advisor.md           — summarize evidence and residual risk for release
 docs/
   AI-Software-QA-Engineering-Flow.html — interactive diagram of the target automation framework
+  test-plan-template.md                — mandatory 13-section test plan document template; used by test-plan-designer.md
 ```
 
 ---
@@ -138,7 +141,9 @@ Remove the label only after a QA Engineer has reviewed and approved the content.
 
 | I need to… | Use this agent |
 |------------|---------------|
+| Parse a raw SOW and produce a structured, verified scope baseline | [Scope-of-Work Analyzer](agents/sow-analyzer.md) |
 | Review requirements before testing | [Requirements and Risk Analyst](agents/requirements-risk-analyst.md) |
+| Create a test plan from an approved SOW Analysis Report | [Test Plan Designer](agents/test-plan-designer.md) |
 | Turn requirements into test cases | [Test Case Designer](agents/test-case-designer.md) |
 | Find edge cases scripted tests might miss | [Exploratory Testing Coach](agents/exploratory-testing-coach.md) |
 | Automate test scenarios in my stack | [Test Automation Engineer](agents/test-automation-engineer.md) |
@@ -158,8 +163,10 @@ Remove the label only after a QA Engineer has reviewed and approved the content.
 ## Recommended Workflow
 
 ```
-Requirements → Risk Analysis → Test Design → Human Review → Execution → Defect Investigation → Release Assessment
+SOW → SOW Analysis → [Human Review & Approval] → Risk Analysis → Test Planning → Test Design → [Human Review] → Execution → Defect Investigation → Release Assessment
 ```
+
+The **SOW Analyzer** (`agents/sow-analyzer.md`) runs first. It produces a structured SOW Analysis Report that becomes the source of truth for every downstream agent. Do not supply a raw SOW directly to the Test Plan Agent — run it through the SOW Analyzer first and obtain QA Engineer approval before proceeding.
 
 At every stage:
 1. Supply only approved, real context — no invented requirements
@@ -177,6 +184,11 @@ Each agent file in `agents/` contains:
 - **Guardrails** — which mandatory rules (G-1 through G-10) apply, and escalation triggers
 - **Expected output** — what a complete, usable response looks like
 - **Prompt** — the text to paste into your AI tool with your context
+
+The **Test Plan Designer** uses [`docs/test-plan-template.md`](docs/test-plan-template.md)
+as its mandatory output structure — it reads the template at generation time and populates all
+13 sections. Supply the approved SOW Analysis Report and any additional approved project sources
+(requirements, scope boundaries, rating scales, schedule, and team details).
 
 **Steps:**
 1. Open the relevant agent file.
