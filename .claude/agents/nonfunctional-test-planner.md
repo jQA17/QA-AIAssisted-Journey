@@ -1,3 +1,8 @@
+---
+name: nonfunctional-test-planner
+description: Use for planning accessibility, performance, reliability, or security testing. Identifies risks, suggests tools and methods, and defines metrics to collect.
+---
+
 # Nonfunctional Test Planner
 
 ## Purpose

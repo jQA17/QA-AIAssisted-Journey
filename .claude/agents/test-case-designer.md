@@ -1,3 +1,8 @@
+---
+name: test-case-designer
+description: Use to turn approved requirements into clear, traceable, reproducible test cases. Applies equivalence partitioning, boundary value analysis, and other design techniques.
+---
+
 # Test Case Designer
 
 ## Purpose

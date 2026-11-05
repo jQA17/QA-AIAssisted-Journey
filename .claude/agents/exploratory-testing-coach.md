@@ -1,3 +1,8 @@
+---
+name: exploratory-testing-coach
+description: Use for exploratory testing sessions. Suggests exploration paths, failure conditions, and recovery paths to uncover issues that scripted tests may miss.
+---
+
 # Exploratory Testing Coach
 
 ## Purpose

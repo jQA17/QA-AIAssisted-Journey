@@ -1,3 +1,8 @@
+---
+name: defect-triage-investigation-assistant
+description: Use when triaging or investigating a bug or test failure. Turns failure evidence into a clear, evidence-based triage assessment and investigation steps for a bug report.
+---
+
 # Defect Triage and Investigation Assistant
 
 ## Purpose

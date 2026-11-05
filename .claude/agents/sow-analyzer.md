@@ -1,3 +1,8 @@
+---
+name: sow-analyzer
+description: Use when given a raw Scope of Work document. Extracts and classifies all QA-relevant information into a structured artifact that serves as the source of truth for downstream QA agents.
+---
+
 # Scope-of-Work Analyzer
 
 ## Purpose
